@@ -1,0 +1,63 @@
+<form> Attributes:-where to send data get or post
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marquee Training Registration Form</title>
+</head>
+<body>
+
+    <h1>University Marquee Training Registration Form</h1>
+
+    <form action="/submit" method="POST">
+
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname"><br><br>
+
+        <label>Enrollment Number:</label><br>
+        <input type="text" name="enrollment"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="tel" name="phone"><br><br>
+
+        <label>Department:</label><br>
+        <select name="department">
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Mechanical</option>
+            <option>Electrical</option>
+            <option>Civil</option>
+        </select><br><br>
+
+        <label>Semester:</label><br>
+        <input type="number" name="semester"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        <label>Training Domain:</label><br>
+        <input type="checkbox" name="domain" value="Web Development"> Web Development<br>
+        <input type="checkbox" name="domain" value="AI/ML"> AI/ML<br>
+        <input type="checkbox" name="domain" value="Cyber Security"> Cyber Security<br><br>
+
+        <label>Date of Registration:</label><br>
+        <input type="date" name="date"><br><br>
+
+        <label>Why do you want to join?</label><br>
+        <textarea name="reason" rows="4" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
+
+         
+
+

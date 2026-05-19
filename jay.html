@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaghasiya Clothing Co.</title>
+  <style>
+    /* ===== CSS Styling ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: sky rgb(15, 26, 84);
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .hero {
+      background: #444;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero button {
+      background: #ff6600;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+    }
+    .hero button:hover {
+      background: #cc5200;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+    .product-card button {
+      background: #222;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background: #444;
+    }
+
+    .cart {
+      background: #fff;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== HTML Structure ===== -->
+  <header>
+    <h1>Vaghasiya Clothing Co.</h1>
+    <nav>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">Sale</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  
+
+
+  <section class="hero">
+    <h2>Style That Speaks</h2>
+    <p>Discover our latest oversized tees and essentials.</p>
+    <button>Shop Now</button>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="c:\Users\vaghasiya jay\Downloads\j.1.jpg" alt="Oversized Tee">
+      <h3>girl's ware</h3>
+      <p>₹1,499</p>
+      <button onclick="addToCart('Essential Oversized Tee')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="c:\Users\vaghasiya jay\Downloads\j.2.jpeg" alt="Classic Tee">
+      <h3>men's wear</h3>
+      <p>₹999</p>
+      <button onclick="addToCart('Classic Tee')">Add to Cart</button>
+    </div>
+  </section>
+
+  <section class="cart">
+    <h2>🛒 Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vaghasiya Clothing Co. | All Rights Reserved</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    let cart = [];
+
+    function addToCart(item) {
+      cart.push(item);
+      displayCart();
+    }
+
+    function displayCart() {
+      const cartList = document.getElementById("cart-items");
+      cartList.innerHTML = "";
+      cart.forEach((product) => {
+        let li = document.createElement("li");
+        li.textContent = product;
+        cartList.appendChild(li);
+      });
+    }
+    
+  </script>
+</body>
+</html>
